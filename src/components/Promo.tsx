@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import Icon from "@/components/ui/icon";
 
 export default function Promo() {
   const container = useRef<HTMLDivElement>(null);
@@ -22,24 +23,26 @@ export default function Promo() {
             alt="MigoMc Items"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-red-950/20 via-transparent to-black/50" />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-emerald-400 uppercase z-10 text-sm md:text-base lg:text-lg font-semibold">
+      <h3 className="absolute top-12 right-6 text-red-500 uppercase z-10 text-sm md:text-base lg:text-lg font-semibold" id="forum">
         Форум сервера
       </h3>
 
-      <div className="relative z-10 px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 px-6 max-w-4xl mx-auto text-center">
+        <Icon name="MessageSquare" size={48} className="text-red-500 mx-auto mb-6" />
         <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed">
-          Нужна помощь? На нашем форуме — <span className="text-emerald-400">поддержка</span>,{" "}
-          <span className="text-purple-400">репорты</span>,{" "}
-          <span className="text-amber-400">разбаны</span> и{" "}
-          <span className="text-red-400">решение проблем</span> с покупками. Всё в одном месте.
+          Нужна помощь? На нашем форуме — <span className="text-red-400">поддержка</span>,{" "}
+          <span className="text-red-300">репорты</span>,{" "}
+          <span className="text-red-400">разбаны</span> и{" "}
+          <span className="text-red-500">решение проблем</span> с покупками.
         </p>
       </div>
 
-      <p className="absolute bottom-12 right-6 text-neutral-400 text-sm z-10 max-w-xs text-right">
+      <p className="absolute bottom-12 right-6 text-neutral-500 text-sm z-10 max-w-xs text-right">
         5 каналов поддержки · Репорты · Разбаны · Заявки на пост · Ошибки покупок
       </p>
     </div>
